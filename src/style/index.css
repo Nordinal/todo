@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: regular;
+  overflow: hidden;
+}
+
+:root {
+  --main-blue: #0170FE;
+  --main-red: #F74557;
+  --main-text: #1A2B3B;
+}
+
+@font-face {
+  font-family: regular;
+  src: url(../../font/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: bold;
+  src: url(../../font/Montserrat-Bold.ttf);
+}

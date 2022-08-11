@@ -1,0 +1,50 @@
+.container{
+    margin: 20px 15px;
+    height: 100vh;
+    width: 75%;
+    position: relative;
+}
+.container div{
+    margin-top: 20px;
+}
+
+.condition{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 30px;
+}
+
+.button{
+    background: var(--main-red);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    font-family: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity .2s linear;
+}
+.button:hover{
+    opacity: .6;
+}
+
+.description{
+    height: 5em;
+    width: 50%;
+    text-align: start;
+    resize: none;
+}
+
+.input{
+    border: solid 2px var(--main-blue);
+    outline: none;
+    padding: 10px 15px;
+}
+.input:focus{
+    border: solid 2px var(--main-red)
+}

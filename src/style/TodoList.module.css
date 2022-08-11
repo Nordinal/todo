@@ -1,0 +1,50 @@
+.container{
+    width: 25%;
+    height: 100vh;
+    position: relative;
+}
+.seacrh{
+    width: 100%;
+    border: solid 2px var(--main-blue);
+    margin: 20px 0px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    outline: none;
+}
+.seacrh:focus{
+    border: solid 2px var(--main-red);
+}
+.item{
+    background: var(--main-blue);
+    color: white;
+    margin: 10px 10px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.itemList{
+    height: 80%;
+    overflow-y: scroll;
+}
+.addButton{
+    background: var(--main-red);
+    border: none;
+    margin: 10px 10px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    font-family: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity .2s linear;
+}
+.addButton:hover{
+    opacity: .6;
+}
+.divAddButton{
+    position: absolute;
+    bottom: 0;
+}
