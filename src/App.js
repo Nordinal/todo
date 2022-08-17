@@ -5,7 +5,8 @@ import './style/App.css';
 function App() {
   return (
     <div className="App">
-        <TodoList/>
+      {/* Список и Редактирование списка соответсвенно */}
+        <TodoList/> 
         <TodoSettings/>
     </div>
   );

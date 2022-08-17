@@ -17,6 +17,9 @@
     position: absolute;
     bottom: 30px;
 }
+.button:not(:first-child){
+    margin-left: 30px;
+}
 
 .button{
     background: var(--main-red);

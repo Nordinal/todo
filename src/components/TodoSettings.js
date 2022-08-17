@@ -1,17 +1,33 @@
 import s from '../style/TodoSettings.module.css'
 import {useSelector, useDispatch} from "react-redux"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const TodoSettings = (props) => {
     const dispatch = useDispatch()
-    const state = useSelector(state => state.items[state.current])
-    const [localState, setLocalState] = useState(state)
+    const state = useSelector(state => state)
+    //Чтобы изменения сразу не отображались в общем хранилище, записываем данные в локальное хранилище
+    const [localState, setLocalState] = useState(state.items[state.current]) 
+    //При изменении активного элемента или удалении элемента перересовываем компонент чтобы записать актуальные данные
+    useEffect(() => {
+        // Если элементов нет то ставим заглушку
+        if(state.items.length === 0){
+            setLocalState({name: "", description: "", state: "0"})
+        }else{
+            setLocalState(state.items[state.current])
+        }
+    }, [state.current || state.items])
+    //Создаем управляемые поля, где разделяем UX и хранилище
     const updateField = (e) => {
         const field = e.target.getAttribute("dataname")
         setLocalState({...localState, [field]: e.target.value})
     }
+    //Редактируем существующий элемент
     const submit = () => {
         dispatch({type: "UPDATE_ITEM", payload: localState})
+    }
+    //Удаляем активный элемент
+    const deleteItem = () => {
+        dispatch({type: "DELETE_ITEM"})
     }
     return (
         <div className={s.container}>
@@ -38,6 +54,7 @@ const TodoSettings = (props) => {
             </div>
             <div className={s.buttons}>
                 <button className={s.button} onClick={submit}>Сохранить</button>
+                <button className={s.button} onClick={deleteItem}>Удалить</button>
             </div>
         </div>
     )

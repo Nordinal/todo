@@ -15,7 +15,6 @@
     border: solid 2px var(--main-red);
 }
 .item{
-    background: var(--main-blue);
     color: white;
     margin: 10px 10px;
     padding: 10px 15px;
@@ -28,13 +27,19 @@
     justify-content: space-between;
     align-items: center;
 }
+.itemblue{
+    background: var(--main-blue);
+}
+.itemred{
+    background: var(--main-red);
+}
 .circle{
     width: 15px;
     height: 15px;
     border-radius: 100%;
 }
 .orangeCircle{
-    background: orange;
+    background: rgb(34, 239, 246);
 }
 .grayCircle{
     background: rgb(220, 220, 220);
