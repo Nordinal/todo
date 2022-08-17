@@ -19,13 +19,16 @@
     margin: 10px 10px;
     padding: 10px 15px;
     border-radius: 25px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     transition: opacity .2s linear;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.text{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
 }
 .itemblue{
     background: var(--main-blue);

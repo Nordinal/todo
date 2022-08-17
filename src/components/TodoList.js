@@ -42,12 +42,14 @@ const Items = (props) => {
                 return(
                     <div key={id} className={
                         props.current === id ? s.item + " " + s.itemred : s.item + " " + s.itemblue
-                    } onClick={getInfo} dataid={id}>{item.name}<span className={
+                    } onClick={getInfo} dataid={id}><p className={s.text}>{item.name}</p>
+                    <span className={
                         item.state === '0' ? s.circle + " " + s.orangeCircle : 
                         item.state === '1' ? s.circle + " " + s.grayCircle : 
                         item.state === '2' ? s.circle + " " + s.greenCircle : " " 
     
-                    }></span></div>
+                    }></span>
+                    </div>
                 )
             }
         })
